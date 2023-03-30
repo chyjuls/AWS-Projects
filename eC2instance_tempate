@@ -1,0 +1,53 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation template for hosting a static web server with Nginx on AWS EC2 Ubuntu instance in the east-1 region.
+
+Resources:
+  WebPageSG:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable HTTP and SSH access
+      GroupName: mywebserver SG
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: Name
+          Value: mywebpage
+      VpcId: vpc-0fc0dd1592001311c
+
+  WebServerInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      SubnetId: subnet-0cbdde12f54948a38
+      KeyName: webserver_1
+      ImageId: ami-007855ac798b5175e # Ubuntu 20.04 LTS (Focal Fossa) - us-east
+      SecurityGroupIds:
+        - !Ref WebPageSG
+      Tags:
+        - Key: Name
+          Value: mywebpage
+      UserData:
+        Fn::Base64: 
+          !Sub |
+            #!/bin/bash
+            apt-get update -y
+            apt-get install -y nginx
+            echo 'Welcome to my home page! I hope you find me a good fit for your company!' > /var/www/html/index.html
+            systemctl enable nginx
+            systemctl start nginx
+
+Outputs:
+  WebServerInstanceIPAddress:
+    Value: !GetAtt WebServerInstance.PublicIp
+    Description: The public IP address of the WebServerInstance EC2 instance.
