@@ -40,10 +40,28 @@ Resources:
       UserData:
         Fn::Base64: 
           !Sub |
+            UserData:
+        Fn::Base64: 
+          !Sub |
             #!/bin/bash
             apt-get update -y
             apt-get install -y nginx
-            echo 'Welcome to my home page! I hope you find me a good fit for your company!' > /var/www/html/index.html
+            echo '<!DOCTYPE html>
+            <html>
+            <head>
+              <meta charset="UTF-8">
+              <title>Welcome to my home page!</title>
+              <style>
+                body {
+                  background-color: #e6f7ff;
+                }
+              </style>
+            </head>
+            <body>
+              <h1>Welcome to my home page!</h1>
+              <p>I hope you find me a good fit for your company!</p>
+            </body>
+            </html>' > /var/www/html/index.html
             systemctl enable nginx
             systemctl start nginx
 
