@@ -46,9 +46,11 @@ Set a password and choose whether it requires a reset on first login.
 
 **Step 3**: Create Admin Group and Attach Policies
 
-Choose "Add user to group" and click "Create group".  
+
 
 Name the group 'admin' and attach the AdministratorAccess policy.   
+
+
 
 
 ![Screenshot of Step 1](./users_1.png)  
