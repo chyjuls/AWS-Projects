@@ -62,7 +62,7 @@ Name the group 'admin' and attach the AdministratorAccess policy.
 
 Add your new user to the 'admin' group to grant ***administrative access***.  
 
-![Screenshot of Step 1](./users_3.png)    
+   
 
 
 
@@ -71,4 +71,4 @@ Add your new user to the 'admin' group to grant ***administrative access***.
 Step 5: Review and Complete  
 
 
-![Screenshot of Step 1](./users_4.png)  
+![Screenshot of Step 1](./users.png)  
