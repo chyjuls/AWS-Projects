@@ -33,6 +33,9 @@ Provide a username and select "AWS Management Console access" as the access type
 Set a password and choose whether it requires a reset on first login.
 
 
+!https://github.com/chyjuls/AWS-Projects/blob/2000ed9c4c69c6ac93b7798f1b0e3942693ca3c2/AWS-IAM/users_2.png
+
+
 
 
 **Step 3**: Create Admin Group and Attach Policies
