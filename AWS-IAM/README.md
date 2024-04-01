@@ -84,4 +84,12 @@ Add your new user to the 'admin' group to grant ***administrative access***.  No
 Step 5: Review and Complete  
 
 
-![Screenshot of Step 1](./users.png)  
+![Screenshot of Step 1](./users.png)    
+
+
+
+
+## Acknowledgments    
+
+### AWS IAM Documentation
+### AWS Support Forums
