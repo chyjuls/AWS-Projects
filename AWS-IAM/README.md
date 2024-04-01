@@ -28,14 +28,15 @@ Navigate to the AWS Management Console and sign in with your credentials.
 
 **Step 2**: Create New IAM User
 
-Go to the IAM dashboard, select "Users", and click "Add user".
-Provide a username and select "AWS Management Console access" as the access type.
+Go to the IAM dashboard, select "Users", and click "create user".
+Provide a username (Plumchy) and select "AWS Management Console access" as the access type.
 Set a password and choose whether it requires a reset on first login.  
 
 
 
 
-![Screenshot of Step 1](./users_2.png)
+![Screenshot of Step 1](./users_2.png)  
+
 
 
 
@@ -45,13 +46,29 @@ Set a password and choose whether it requires a reset on first login.
 
 **Step 3**: Create Admin Group and Attach Policies
 
-Choose "Add user to group" and click "Create group".
-Name the group 'admin' and attach the AdministratorAccess policy.  
+Choose "Add user to group" and click "Create group".  
+
+Name the group 'admin' and attach the AdministratorAccess policy.   
+
+
+![Screenshot of Step 1](./users_1.png)  
+
+
+
+
+
 
 **Step 4**: Add User to Admin Group
 
 Add your new user to the 'admin' group to grant ***administrative access***.  
 
-Step 5: Review and Complete
+![Screenshot of Step 1](./users_3.png)    
 
-Review your settings, then click "Create user" to finalize the setup.
+
+
+
+
+Step 5: Review and Complete  
+
+
+![Screenshot of Step 1](./users_4.png)  
