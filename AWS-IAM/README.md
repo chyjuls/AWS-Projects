@@ -33,7 +33,7 @@ Provide a username and select "AWS Management Console access" as the access type
 Set a password and choose whether it requires a reset on first login.
 
 
-![Screenshot of Step 1](./AWS-IAM/users_1.png)
+![Screenshot of Step 1](./users_1.png)
 
 
 
