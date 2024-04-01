@@ -30,10 +30,15 @@ Navigate to the AWS Management Console and sign in with your credentials.
 
 Go to the IAM dashboard, select "Users", and click "Add user".
 Provide a username and select "AWS Management Console access" as the access type.
-Set a password and choose whether it requires a reset on first login.
+Set a password and choose whether it requires a reset on first login.  
 
 
-![Screenshot of Step 1](./users_1.png)
+
+
+![Screenshot of Step 1](./users_2.png)
+
+
+
 
 
 
