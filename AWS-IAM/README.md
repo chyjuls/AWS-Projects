@@ -60,8 +60,11 @@ Name the group 'admin' and attach the AdministratorAccess policy.
 
 **Step 4**: Add User to Admin Group
 
-Add your new user to the 'admin' group to grant ***administrative access***.  
+Add your new user to the 'admin' group to grant ***administrative access***.  Note that other policies have been attached to user.  
 
+
+
+![Screenshot of Step 1](./policy.png) 
    
 
 
